@@ -35,6 +35,7 @@ public class FTPListDemo {
 
 			System.out.println("3. " + ftpClient.getStatus());
 			System.out.println("4. " + ftpClient.toString());
+			System.out.println("\n");
 
 			int reply = ftpClient.getReplyCode();
 			System.out.println(":: ReplyCode: " + reply);
