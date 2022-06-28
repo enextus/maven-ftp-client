@@ -1,7 +1,10 @@
+
+
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
+import lib.PrintSomeItems;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
 import org.apache.commons.net.ftp.FTPReply;
@@ -15,7 +18,7 @@ public class FTPListDemo {
 
 	public static void main(String[] args) throws IOException {
 
-		String server = "localhost";
+		String server = "0.0.0.0";
 		int port = 4567;
 		String user = "ftpuser";
 		String pass = "Pw1337,.-";
@@ -63,7 +66,7 @@ public class FTPListDemo {
 
 			System.out.println("Login successful? : " + success);
 			System.out.println("ftpClient: " + ftpClient);
-			showServerReply(ftpClient);
+			PrintSomeItems.showServerReply(ftpClient);
 			System.out.println("FTP Server connected!\n");
 
 			FTPFile[] files;
@@ -75,11 +78,11 @@ public class FTPListDemo {
 
 			// uses simpler methods
 			String[] files2 = ftpClient.listNames("/");
-			printNames(files2);
+			PrintSomeItems.printNames(files2);
 
 			// List files and directories
 			FTPFile[] files1 = ftpClient.listFiles("/");
-			printFileDetails(files1);
+			PrintSomeItems.printFileDetails(files1);
 
 		}
 		catch (IOException ex) {
@@ -101,7 +104,7 @@ public class FTPListDemo {
 
 	}
 
-	private static void printFileDetails(FTPFile[] files) {
+/*	private static void printFileDetails(FTPFile[] files) {
 		DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		System.out.println("\n");
 		for (FTPFile file : files) {
@@ -133,6 +136,6 @@ public class FTPListDemo {
 				System.out.println("SERVER REPLY: " + aReply);
 			}
 		}
-	}
+	}*/
 
 }
