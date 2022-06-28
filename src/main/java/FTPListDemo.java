@@ -1,8 +1,4 @@
-
-
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 
 import lib.PrintSomeItems;
 import org.apache.commons.net.ftp.FTPClient;
@@ -12,6 +8,7 @@ import org.apache.commons.net.ftp.FTPReply;
 /**
  * An example program that demonstrates how to list files and directories
  * on an FTP server using Apache Commons Net API.
+ *
  * @author www.codejava.net
  */
 public class FTPListDemo {
@@ -25,7 +22,7 @@ public class FTPListDemo {
 
 		System.out.println("Try to connect to the FTP Server!");
 
-		System.out.println("1. " + FTPListDemo.class.getName());
+//		System.out.println("1. " + FTPListDemo.class.getName());
 
 		System.out.println("\n");
 
